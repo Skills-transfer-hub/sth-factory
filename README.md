@@ -1,5 +1,10 @@
 # STH Factory — version locale v2
 
+> **Direction du projet — 4 novembre 2026 :** le moteur de Factory est en cours
+> d'intégration à la réécriture Rust de **STH Code**, pour une application commune
+> Windows, macOS et Linux. Cette version Python reste disponible et sert de
+> référence de comportement pendant le portage. Voir [le plan de convergence](docs/RUST-CONVERGENCE.md).
+
 Orchestrateur open source indépendant des agents et fournisseurs (Python 3.12+, Git, Linux/POSIX), sous MIT. Il planifie des tâches, conserve leur état SQLite, produit des patchs et propose un cockpit local de revue. Aucun agent, modèle, SDK fournisseur ou backend privé STH Code n'est obligatoire. Aucun merge, push ou déploiement automatique.
 
 L'objectif est de suivre un parcours vérifiable : **demande → tâches → travail des agents → tests → patch à relire**. Le harness (par exemple DeepSeek Harness, Codex ou Claude Code) fournit les outils au modèle ; la Factory coordonne le travail, ses dépendances et ses preuves. Elle peut servir à STH ou à un autre dépôt Git.
