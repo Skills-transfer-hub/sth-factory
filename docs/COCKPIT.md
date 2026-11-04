@@ -12,6 +12,12 @@ Le serveur lie uniquement `127.0.0.1`. Les API exigent la capacité dans `Author
 
 `monitoring.status(run_dir)` lit le résumé, le plan et une fin bornée du journal. Les événements permettent un suivi pendant l'exécution, avant le résumé final. Un nouveau `run_started` ou `run_resumed` après un résumé ancien prend priorité sur celui-ci. Les états inconnus sont affichés comme données. Une dernière ligne d'événement partielle est ignorée avec avertissement. Le module ne crée pas de base SQLite et ne modifie pas les preuves.
 
+Le cockpit et `status` exposent aussi la durée observée de la **dernière session** et du **dernier essai de chaque tâche**. Une reprise démarre une nouvelle session : la pause précédente et les anciens essais ne sont pas additionnés. Une tâche déjà réussie et réutilisée conserve sa dernière durée terminée. La préparation du worktree, l'exécution et l'export du patch font partie du temps d'une tâche.
+
+Le champ `timing` contient `scope` (`latest_session` ou `latest_attempt`), `started_at`, `finished_at` (secondes Unix), `duration_seconds` et `live`. Le calcul utilise les événements du superviseur, jamais un chiffre fourni par l'agent. Une durée en cours exige un superviseur actif. Sans couple de dates valable, après interruption ou si l'historique nécessaire manque, la durée vaut `null` et l'interface affiche « Durée indisponible ». Un journal endommagé invalide les couples de dates antérieurs ; une fin de journal tronquée reste exploitable si elle conserve le couple complet.
+
+Ces durées murales peuvent être affectées par un changement d'horloge. Elles servent au suivi du travail, pas à prouver un gain de performance du produit, un coût fournisseur ou du temps humain économisé. Une telle comparaison demande un benchmark distinct, exécuté dans les mêmes conditions avant et après le changement.
+
 `monitoring.review(run_dir, task=None, max_bytes=65536)` retourne des fins de logs et un patch bornés. Le maximum par fichier est 1 MiB ; au-delà de 64 tâches, sélectionner une tâche. Un patch tronqué est une **prévisualisation uniquement**, pas un patch à appliquer. L'API distingue explicitement cette troncature. Les métadonnées JSON sont limitées à 1 MiB et la liste à 200 runs.
 
 Les limites du MVP restent applicables : les preuves locales sont modifiables par le même utilisateur système et les logs peuvent contenir des informations sensibles. La capacité protège l'accès HTTP, pas les fichiers d'un hôte compromis. Les worktrees ne sont pas des sandboxes. Aucun fournisseur ou modèle n'est requis pour le cockpit.

@@ -58,23 +58,34 @@ function station(task) {
   image.alt = 'Buddy — tâche ' + task.id;
   stage.append(image, text('div', '', 'station-bench'));
   const caption = text('p', '', 'station-caption'),
+    duration = text('p', '', 'station-caption station-duration'),
     deps = text('div', '', 'station-dependencies'),
     controls = text('div', '', 'station-controls'),
     button = text('button', 'Inspecter ' + task.id, 'station-select');
   button.type = 'button';
   button.addEventListener('click', () => showTask(selected, task.id));
   controls.append(button);
-  card.append(head, stage, caption, deps, controls);
+  duration.title = 'Dernière tentative, préparation et export du patch inclus. Les essais précédents ne sont pas additionnés.';
+  card.append(head, stage, caption, duration, deps, controls);
   const player = FactoryBuddyPlayer.create({image, caption, activityOnly: true});
   player.setMotion(motion);
   if (observer) player.setVisible(false);
-  const entry = {card, player, state, deps, button, dependencyKey: null};
+  const entry = {card, player, state, duration, deps, button, dependencyKey: null};
   stations.set(task.id, entry);
   observer?.observe(card);
   return entry;
 }
 
 function renderFloor() {
+  $('#summary').replaceChildren();
+  if (snapshot) $('#summary').append(
+    text('p', 'État : ' + snapshot.status, 'badge'),
+    text('p', 'Dernière session · ' + FactoryView.durationLabel(snapshot.timing,
+      snapshot.status === 'running' && snapshot.supervisor_active === true), 'run-duration'),
+    text('p', 'Commit : ' + (snapshot.base || 'non disponible')),
+    text('p', 'Source inchangée : ' + (snapshot.source_unchanged === true ? 'oui' :
+      snapshot.source_unchanged === false ? 'non' : 'à vérifier'))
+  );
   const view = FactoryView.project(snapshot, {
     query: $('#task-search').value,
     filter: $('#task-state-filter').value,
@@ -112,6 +123,7 @@ function renderFloor() {
     entry.card.classList.toggle('is-selected', inspected?.task === task.id);
     entry.button.setAttribute('aria-pressed', String(inspected?.task === task.id));
     entry.state.textContent = task.state === 'success' ? 'Succès' : labels[task.state] || 'À vérifier';
+    entry.duration.textContent = 'Dernier essai · ' + task.duration;
     entry.player.observeState(task);
     const key = task.depends_on.join(',');
     if (entry.dependencyKey !== key) {
@@ -175,6 +187,7 @@ async function showRun(name) {
     $('#detail-title').textContent = 'Inspecter un poste';
   }
   selected = name;
+  $('#run-title').textContent = name;
   for (const [runName, button] of runButtons) {
     button.classList.toggle('is-selected', runName === name);
     button.setAttribute('aria-pressed', String(runName === name));
@@ -184,13 +197,6 @@ async function showRun(name) {
     const run = await api('/api/status?run=' + encodeURIComponent(name));
     if (request !== runRequest || selected !== name) return;
     snapshot = run;
-    $('#run-title').textContent = name;
-    $('#summary').replaceChildren(
-      text('p', 'État : ' + run.status, 'badge'),
-      text('p', 'Commit : ' + (run.base || 'non disponible')),
-      text('p', 'Source inchangée : ' + (run.source_unchanged === true ? 'oui' :
-        run.source_unchanged === false ? 'non' : 'à vérifier'))
-    );
     $('#events').textContent = (run.events || []).slice(-15).map(e => JSON.stringify(e)).join('\n') || 'Aucun événement disponible.';
     renderFloor();
     message((run.warnings || []).join(' · ') || 'États observés du moteur · actualisation toutes les 3 secondes.');

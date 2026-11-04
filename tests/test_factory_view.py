@@ -94,6 +94,25 @@ result.tasks[0].depends_on.push('c'); assert.deepEqual(input.plan.tasks[0].depen
 for(const malformed of [[],42,'oops',false]) assert.equal(view.project(malformed).tasks.length,0);
 """)
 
+    def test_duration_labels_and_live_activity_verification(self):
+        self.check_js("""
+for (const timing of [null, {}, {duration_seconds: null}, {duration_seconds: '3'},
+ {duration_seconds: true}, {duration_seconds: -1}, {duration_seconds: NaN}, {duration_seconds: Infinity}]) {
+ assert.equal(view.durationLabel(timing), 'Durée indisponible');
+}
+assert.equal(view.durationLabel({duration_seconds:0}), 'Durée : 0,0 s');
+assert.equal(view.durationLabel({duration_seconds:1.25}), 'Durée : 1,3 s');
+assert.equal(view.durationLabel({duration_seconds:125}), 'Durée : 2 min 5 s');
+assert.equal(view.durationLabel({duration_seconds:3660}), 'Durée : 1 h 1 min');
+const timing={duration_seconds:5,live:true};
+assert.equal(view.durationLabel(timing), 'Durée indisponible');
+assert.equal(view.durationLabel(timing,true), 'Écoulé : 5,0 s');
+const run={status:'running',supervisor_active:true,tasks:{a:{status:'running',timing}}};
+assert.equal(view.project(run).tasks[0].duration, 'Écoulé : 5,0 s');
+run.supervisor_active=false;
+assert.equal(view.project(run).tasks[0].duration, 'Durée indisponible');
+""")
+
 
 if __name__ == '__main__':
     unittest.main()

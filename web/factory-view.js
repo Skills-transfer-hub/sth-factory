@@ -15,6 +15,16 @@
   const validID = value => typeof value === 'string' && identifier.test(value);
   const dependencies = value => Array.isArray(value) ? [...new Set(value.filter(validID))] : [];
 
+  function durationLabel(timing, liveAllowed = false) {
+    const seconds = object(timing) ? timing.duration_seconds : null;
+    if (typeof seconds !== 'number' || !Number.isFinite(seconds) || seconds < 0 ||
+        (timing.live === true && !liveAllowed)) return 'Durée indisponible';
+    const value = seconds < 60 ? seconds.toFixed(1).replace('.', ',') + ' s' :
+      seconds < 3600 ? `${Math.floor(seconds / 60)} min ${Math.floor(seconds % 60)} s` :
+        `${Math.floor(seconds / 3600)} h ${Math.floor(seconds % 3600 / 60)} min`;
+    return (timing.live === true ? 'Écoulé : ' : 'Durée : ') + value;
+  }
+
   function project(snapshot, options = {}) {
     const run = object(snapshot) ? snapshot : {};
     const settings = object(options) ? options : {};
@@ -44,7 +54,8 @@
         else caption = 'Activité non vérifiée ; état à vérifier';
       }
       const deps = owns(actual, 'depends_on') ? actual.depends_on : planned && planned.depends_on;
-      const record = {id, status, state, caption, depends_on: dependencies(deps), index: tasks.length};
+      const record = {id, status, state, caption, depends_on: dependencies(deps), index: tasks.length,
+        duration: durationLabel(actual.timing, state === 'working')};
       tasks.push(record);
       counts.total += 1;
       counts[state] += 1;
@@ -61,7 +72,7 @@
     return {tasks, visible: filtered.slice(page * pageSize, (page + 1) * pageSize), counts,
       page, pageCount, filteredCount: filtered.length, pageSize};
   }
-  const api = Object.freeze({project});
+  const api = Object.freeze({project, durationLabel});
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.FactoryView = api;
 })(typeof globalThis !== 'undefined' ? globalThis : this);

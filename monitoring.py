@@ -1,10 +1,12 @@
 """Bounded, read-only run inspection. Evidence is data, never permission."""
 import json
 import fcntl
+import math
 import os
 from pathlib import Path
 import re
 import stat
+import time
 
 METADATA_LIMIT = 1024 * 1024
 TASK_ID = re.compile(r'[A-Za-z0-9][A-Za-z0-9_-]{0,63}')
@@ -86,6 +88,53 @@ def supervisor_active(root):
             os.close(descriptor)
 
 
+def _timestamp(value):
+    try:
+        return value if type(value) in (int, float) and value >= 0 and math.isfinite(value) else None
+    except OverflowError:
+        return None
+
+
+def _timing(scope, started, finished, live, now):
+    started, finished = _timestamp(started), _timestamp(finished)
+    end = finished if finished is not None else _timestamp(now) if live else None
+    duration = end - started if started is not None and end is not None and end >= started else None
+    return {'scope': scope, 'started_at': started, 'finished_at': finished,
+            'duration_seconds': duration, 'live': bool(live and duration is not None)}
+
+
+def _timings(events, tasks, active):
+    started = finished = None
+    session_open = False
+    attempts, pending = {}, set()
+    for event in events:
+        name, timestamp = event.get('event'), event.get('time')
+        if name in ('run_started', 'run_resumed', 'run_finished'):
+            for identifier in pending:
+                attempts[identifier] = (None, None)
+            pending.clear()
+        if name in ('run_started', 'run_resumed'):
+            started, finished, session_open = timestamp, None, True
+        elif name == 'run_finished':
+            finished, session_open = timestamp, False
+        identifier = event.get('task')
+        if not isinstance(identifier, str) or identifier not in tasks:
+            continue
+        if name == 'started':
+            attempts[identifier] = (timestamp, None)
+            pending.add(identifier)
+        elif name == 'finished':
+            attempts[identifier] = (attempts.get(identifier, (None, None))[0], timestamp)
+            pending.discard(identifier)
+        elif name == 'blocked':
+            pending.discard(identifier)
+    now = time.time()
+    for identifier, task in tasks.items():
+        task['timing'] = _timing('latest_attempt', *attempts.get(identifier, (None, None)),
+                                 active and identifier in pending and task.get('status') == 'running', now)
+    return _timing('latest_session', started, finished, active and session_open, now)
+
+
 def status(run_dir):
     root = checked_directory(run_dir)
     summary = _json(root, 'summary.json', {})
@@ -99,6 +148,8 @@ def status(run_dir):
             tasks[task['id']] = {'status': 'not_started', 'depends_on': task.get('depends_on', [])}
     raw_events = _read(root, ['events.jsonl'], METADATA_LIMIT, tail=True)
     events = []
+    # A damaged event may hide a new attempt; never pair timings across it.
+    timing_start = 0
     if raw_events:
         lines = raw_events['text'].splitlines()
         if raw_events['truncated']:
@@ -109,9 +160,11 @@ def status(run_dir):
                 event = json.loads(line)
             except (ValueError, RecursionError):
                 warnings.append('partial or invalid event skipped')
+                timing_start = len(events)
                 continue
             if not isinstance(event, dict):
                 warnings.append('non-object event skipped')
+                timing_start = len(events)
                 continue
             events.append(event)
             identifier = event.get('task')
@@ -124,7 +177,7 @@ def status(run_dir):
                 item['status'] = event.get('status', 'unknown')
             elif event.get('event') == 'blocked':
                 item['status'] = 'blocked'
-    lifecycle = [event.get('event') for event in events if event.get('event') in {'run_started', 'run_resumed', 'run_finished'}]
+    lifecycle = [event.get('event') for event in events if event.get('event') in ('run_started', 'run_resumed', 'run_finished')]
     if lifecycle and lifecycle[-1] in {'run_started', 'run_resumed'}:
         summary = {}
     for identifier, value in summary.get('tasks', {}).items():
@@ -141,6 +194,7 @@ def status(run_dir):
                 value['status'] = overall
     return {'name': root.name, 'status': overall, 'base': summary.get('base'),
             'reported_status': reported, 'supervisor_active': active,
+            'timing': _timings(events[timing_start:], tasks, active is True and overall == 'running'),
             'source_unchanged': summary.get('source_unchanged'),
             'security_sandbox': summary.get('security_sandbox', False),
             'tasks': tasks, 'plan': plan, 'events': events[-100:], 'warnings': warnings,

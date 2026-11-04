@@ -2,13 +2,30 @@
 
 Orchestrateur open source indépendant des agents et fournisseurs (Python 3.12+, Git, Linux/POSIX), sous MIT. Il planifie des tâches, conserve leur état SQLite, produit des patchs et propose un cockpit local de revue. Aucun agent, modèle, SDK fournisseur ou backend privé STH Code n'est obligatoire. Aucun merge, push ou déploiement automatique.
 
+L'objectif est de suivre un parcours vérifiable : **demande → tâches → travail des agents → tests → patch à relire**. Le harness (par exemple DeepSeek Harness, Codex ou Claude Code) fournit les outils au modèle ; la Factory coordonne le travail, ses dépendances et ses preuves. Elle peut servir à STH ou à un autre dépôt Git.
+
+Le cockpit affiche la durée de la dernière session et du dernier essai de chaque tâche. Ces mesures rendent le travail visible ; un gain de performance du logiciel demande son propre benchmark avant/après. Le [pilote proposé pour STH](docs/PILOT.md) applique cette distinction aux deux références du projet.
+
+Source publique : [Skills-transfer-hub/sth-factory](https://github.com/Skills-transfer-hub/sth-factory). Pour essayer sans compte IA, avec Python 3.12+ et Git installés :
+
+```sh
+git clone https://github.com/Skills-transfer-hub/sth-factory.git
+cd sth-factory
+python3.12 demo.py --output ../sth-factory-demo
+python3.12 factory.py serve --runs-root ../sth-factory-demo --port 8765
+```
+
+Choisir un dossier de démo neuf et ouvrir le lien complet imprimé par le serveur. La démo utilise des processus déterministes, pas un modèle.
+
 Buddy 3D accompagne les états réellement observés du run sélectionné, avec animations officielles, pause et préférence de réduction des mouvements. **Le code est MIT ; les visuels, animations et modèle Buddy restent à droits réservés**, copiés et distribués avec cette factory sur autorisation spécifique de STH. Voir [provenance et droits](docs/BUDDY-3D.md) et `THIRD_PARTY_NOTICES.md`. Cette autorisation n'accorde pas une licence générale sur la mascotte.
 
-Le cœur échange un contrat JSON versionné avec des processus configurés par l'opérateur. Des adaptateurs facultatifs de commande générique, Codex et Claude sont fournis, sans préférence fournisseur. La conformité est éprouvée avec deux implémentations distinctes Python et Node. Ce sont des processus déterministes ; aucun modèle réel n'a été validé. STH fournit seulement des assets via son bridge optionnel.
+Le cœur échange un contrat JSON versionné avec des processus configurés par l'opérateur. Des adaptateurs facultatifs de commande générique, Codex, Claude et [DeepSeek Harness](docs/DEEPSEEK.md) sont fournis, sans préférence fournisseur. La conformité est éprouvée avec deux implémentations distinctes Python et Node. Ce sont des processus déterministes ; aucun modèle réel n'a été validé. STH fournit seulement des assets via son bridge optionnel.
 
 La v2 ajoute l'isolation Docker optionnelle réellement testée, une reprise durable avec réessais explicites et bornés, `init`/`doctor` pour Python et Node, `status`/`review`, un cockpit local en lecture seule et la préparation de PR. La création d'un brouillon est une opération distincte, uniquement sur demande, sans push.
 
 Validation : [89 tests réussis avec STH et Docker réels](evidence/v2/VALIDATION.md). Les résultats du MVP v1 sont conservés séparément dans `evidence/VALIDATION.md`.
+
+Validation locale du 4 novembre 2026 après ajout de DeepSeek et des durées : suite de 120 tests, dont 115 réussis et 5 intégrations optionnelles ignorées ; démo complète et cockpit vérifiés. Le vrai CLI DeepSeek a produit un patch puis passé une validation indépendante avec un fournisseur simulé sur localhost ([détails](docs/DEEPSEEK.md)). Aucun modèle réel, coût fournisseur ou gain de performance STH n'a encore été mesuré.
 
 ```sh
 python3 factory.py init --destination /tmp/project-config --template python

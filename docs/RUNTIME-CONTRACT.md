@@ -1,6 +1,6 @@
 # Contrat de runtime indépendant des agents — version 1
 
-Le moteur orchestre des exécutables autorisés par l'opérateur. Il n'importe aucun SDK de modèle, ne choisit aucun fournisseur et ne privilégie aucun agent. Les adaptateurs Codex et Claude sont optionnels ; l'adaptateur `command.py` permet toute autre implémentation qui respecte ce contrat. Python standard et Git restent les dépendances du moteur, indépendamment du fournisseur choisi.
+Le moteur orchestre des exécutables autorisés par l'opérateur. Il n'importe aucun SDK de modèle, ne choisit aucun fournisseur et ne privilégie aucun agent. Les adaptateurs Codex, Claude et DeepSeek Harness sont optionnels ; l'adaptateur `command.py` permet toute autre implémentation qui respecte ce contrat. Python standard et Git restent les dépendances du moteur, indépendamment du fournisseur choisi.
 
 ## Entrée et sortie
 
@@ -43,11 +43,12 @@ Ou encore un exécutable indépendant, directement autorisé dans `commands`, ou
 | --- | --- | --- |
 | `command.py` | Valide le JSON puis transmet stdin à un argv fixe sans shell | Vrai sous-processus Python, transmission du contrat et texte littéral sans expansion shell |
 | `codex.py` | CLI non interactif, approbation `never`, `workspace-write`, configuration utilisateur ignorée, session éphémère | Stub de CLI pour le contrat ; vrai `--version` disponible : `codex-cli 0.163.0`. Aucun modèle exécuté |
-| `claude.py` | CLI en mode print/restricted/dontAsk, outils Read/Edit/Write, MCP refusé, trois tours par défaut | Stub uniquement. Le binaire Claude n'est pas installé ; aucun modèle exécuté |
+| `claude.py` | CLI en mode print/restricted/dontAsk, outils Read/Edit/Write, MCP refusé, trois tours par défaut | Stub uniquement ; aucun modèle exécuté |
+| `deepseek.py` | Profil headless, `workspace-write`, `never`, stdin, traces NDJSON, fin `completed` obligatoire ; HOME DSH neuf, uploads/télémétrie désactivés | Tests de contrat et erreurs ; voir la [configuration et la validation DeepSeek](DEEPSEEK.md) pour la version vérifiée et les limites |
 
 Les options de l'adaptateur Codex ont été vérifiées dans l'aide du CLI installé. Les options Claude ont été vérifiées dans la [référence officielle du CLI Claude Code](https://code.claude.com/docs/en/cli-reference), consultée le 4 novembre 2026. Le mode restricted demande une version compatible récente ; aucune compatibilité avec un ancien CLI n'est supposée. Les options de permissions des CLI ne remplacent pas une sandbox système.
 
-`--probe` des adaptateurs Codex/Claude n'appelle que `--version`, avec un timeout de cinq secondes. Il n'authentifie pas le fournisseur, ne démarre pas de modèle et ne prouve pas qu'une tâche de code sera réalisable. Aucun adaptateur ne crée de credentials, n'effectue de login ou ne réutilise implicitement un HOME utilisateur. L'environnement minimal du moteur ne fournit aucune authentification fournisseur : elle doit être provisionnée explicitement par l'opérateur dans un environnement de développement isolé. Cette intégration réelle demeure non validée ici.
+`--probe` des adaptateurs Codex/Claude/DeepSeek n'appelle que `--version`, avec un timeout de cinq secondes. Il n'authentifie pas le fournisseur, ne démarre pas de modèle et ne prouve pas qu'une tâche de code sera réalisable. Aucun adaptateur ne crée de credentials, n'effectue de login ou ne réutilise implicitement un HOME utilisateur. L'environnement minimal du moteur ne fournit aucune authentification fournisseur : elle doit être provisionnée explicitement par l'opérateur dans un environnement de développement isolé. Cette intégration avec un modèle réel demeure non validée ici.
 
 ## Conformité et comptabilité
 

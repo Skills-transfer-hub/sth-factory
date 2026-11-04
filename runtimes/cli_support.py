@@ -30,10 +30,13 @@ def require_binary(binary):
     return binary
 
 
-def probe(binary):
+def probe(binary, interpreter=None):
     require_binary(binary)
+    command = [binary, '--version']
+    if interpreter is not None:
+        command.insert(0, require_binary(interpreter))
     try:
-        result = subprocess.run([binary, '--version'], capture_output=True, text=True, timeout=5)
+        result = subprocess.run(command, capture_output=True, text=True, timeout=5)
     except (OSError, subprocess.TimeoutExpired) as error:
         print(json.dumps({'available': False, 'error': str(error), 'model_called': False}))
         return 1
