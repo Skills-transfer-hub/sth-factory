@@ -1,0 +1,19 @@
+# Frontières de confiance
+
+Ce MVP est destiné aux commandes relues et aux tests de développement sur des dépôts sans secrets. Il ne contient aucun mécanisme d'auto-merge, de publication ou de déploiement.
+
+La v2 propose deux modes : `local` conserve les limites ci-dessous ; `container` ajoute une frontière décrite dans [ISOLATION.md](docs/ISOLATION.md), éprouvée par de vrais tests Docker. Le conteneur est nonroot mais le daemon disponible est rootful ; le noyau est partagé et le snapshot n'a pas de quota disque strict. Le réseau est coupé. L'état durable, les preuves, les credentials, le miroir Git et le socket Docker ne sont pas montés.
+
+Le cockpit est lié à `127.0.0.1`, en lecture seule, protégé par une capacité temporaire, sans CORS ouvert ni endpoint d'exécution. Les logs sont insérés comme texte, jamais comme HTML. GitHub prépare une demande locale ; créer un brouillon exige l'action distincte `github-draft --request-draft`, revalide les preuves et n'effectue aucun push, merge ou déploiement. Aucun brouillon réel n'a été créé lors des tests.
+
+Les worktrees isolent le contenu Git et l'index des tâches, pas les permissions du système. Ils partagent le miroir de la factory, le même utilisateur, les ports et le réseau de l'hôte. Une commande peut lire ou modifier d'autres dossiers accessibles, lancer ses propres commandes ou altérer les preuves d'une autre tâche. Le test `test_worktree_is_not_security_sandbox` écrit volontairement un marqueur hors du worktree dans un dossier temporaire pour prouver cette limite. L'empreinte source peut détecter certaines altérations ; elle ne les empêche pas.
+
+La liste d'argv autorisés contrôle **le lancement initial uniquement**. Les instructions textuelles données au runtime ne sont pas un contrôle technique de permissions. Ni les issues, le dépôt, les sorties de processus ni les assets STH ne peuvent élargir la politique opérateur. Garder la politique et les exécutables relus hors du contrôle des tâches. Une sandbox externe est nécessaire avant de traiter un dépôt ou un agent hostile : identité et filesystem séparés, miroir et preuves hors de portée, réseau filtré, quotas CPU/mémoire/disque et supervision indépendante.
+
+Le processus reçoit un environnement minimal, sans héritage des tokens ni du HOME utilisateur. Cela réduit les fuites accidentelles ; cela n'empêche pas un processus sous le même UID de lire des fichiers de l'hôte. Ne jamais monter des secrets de production dans cet environnement. Les requêtes, assets et logs peuvent contenir des informations sensibles : ne pas les publier automatiquement.
+
+Les budgets bornent les tâches et le temps. Les processus Git et runtimes sont surveillés par polling ; les interruptions peuvent dépasser leur échéance de l'intervalle de polling et du temps d'arrêt système. Le seuil de sortie est vérifié par polling (10–20 ms) et peut être dépassé entre deux contrôles : ce n'est pas un quota disque strict. Les limites ne couvrent pas les autres fichiers produits par une commande. SIGKILL est envoyé au groupe de processus, y compris après une sortie normale ; un descendant qui crée sa propre session peut y échapper. Un superviseur système est nécessaire pour les quotas et l'annulation forte.
+
+Le faux runtime refuse traversées de chemins, chemins absolus, `.git` et symlinks. Ce contrôle ne protège pas contre une autre commande hostile concurrente effectuant des courses sur le filesystem. Le miroir est indépendant du dépôt source, mais les tâches partagent ses métadonnées. Les sous-modules ne sont pas initialisés, les filtres Git utilisateur ne sont pas fournis et les modifications ignorées ne sont pas exportées.
+
+Les défaillances restent visibles dans les preuves ; les worktrees ne sont ni supprimés de force ni réutilisés. Aucun nettoyage destructif automatique. Pour un nettoyage manuel, vérifier le dossier d'exécution créé par la factory et conserver les preuves nécessaires.

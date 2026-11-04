@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>STH Factory — L’atelier</title>
+<link rel="icon" href="/buddy.png" type="image/png">
+<link rel="stylesheet" href="/style.css">
+<script src="/buddy-state.js" defer></script>
+<script src="/buddy-player.js" defer></script>
+<script src="/factory-view.js" defer></script>
+<script src="/app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#atelier">Aller à l’atelier</a>
+<header class="site-header">
+  <div class="brand"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><div><p class="eyebrow">STH / FACTORY</p><p class="brand-caption">L’atelier des agents</p></div></div>
+  <div class="header-notes"><span class="mode-label">Local · lecture seule</span><p>Une tâche réelle. Un poste. Un Buddy.</p></div>
+</header>
+<main class="factory-layout">
+  <aside class="run-sidebar" aria-labelledby="runs-heading">
+    <div class="sidebar-heading"><div><p class="eyebrow">CARNET DE BORD</p><h2 id="runs-heading">Exécutions</h2></div><button id="refresh" type="button" class="icon-button" aria-label="Actualiser les exécutions" title="Actualiser les exécutions">↻</button></div>
+    <p class="sidebar-help">Choisir une exécution pour ouvrir son atelier.</p>
+    <nav id="runs" aria-label="Liste des exécutions"></nav>
+    <div class="sidebar-note"><span class="note-mark" aria-hidden="true">↳</span><p>Les postes et leurs états proviennent des tâches enregistrées. Aucun agent n’est ajouté pour décorer l’atelier.</p></div>
+  </aside>
+  <div class="workspace">
+    <section class="run-overview" aria-labelledby="run-title">
+      <p id="message" class="system-message" role="status" aria-live="polite">Chargement des exécutions locales…</p>
+      <div class="overview-heading"><div><p class="eyebrow">EXÉCUTION SÉLECTIONNÉE</p><h1 id="run-title">Ouvrir un atelier</h1></div><button id="motion-toggle" type="button" class="secondary-button" aria-pressed="false">Réduire les mouvements</button></div>
+      <div id="summary" class="run-summary" aria-label="Informations de l’exécution"></div>
+      <div id="factory-counts" class="factory-counts" aria-label="Nombre de tâches par état" aria-live="polite"></div>
+    </section>
+    <section id="atelier" class="atelier" aria-labelledby="floor-heading" tabindex="-1">
+      <div class="floor-toolbar"><div><p class="eyebrow">PLATEAU DE PRODUCTION</p><h2 id="floor-heading">Les postes de travail</h2></div><p class="floor-explainer">Un poste représente une tâche, quel que soit l’agent utilisé.</p></div>
+      <div class="task-filters" role="search" aria-label="Filtrer les postes">
+        <div class="search-field"><label for="task-search">Rechercher une tâche</label><input id="task-search" type="search" placeholder="Nom ou identifiant de tâche" autocomplete="off"></div>
+        <div class="state-field"><label for="task-state-filter">État du poste</label><select id="task-state-filter"><option value="all">Tous les états</option><option value="working">Au travail</option><option value="waiting">En attente</option><option value="success">Terminé</option><option value="error">Erreur</option><option value="unknown">Inconnu</option></select></div>
+      </div>
+      <div class="floor-scene">
+        <div class="floor-legend" aria-label="Légende des états"><span class="legend-item legend-working">Au travail</span><span class="legend-item legend-waiting">En attente</span><span class="legend-item legend-success">Terminé</span><span class="legend-item legend-error">Erreur</span><span class="legend-item legend-unknown">Inconnu</span></div>
+        <div id="floor-empty" class="floor-empty"><div class="empty-floor-symbol" aria-hidden="true"><span></span><span></span><span></span></div><p class="empty-title">L’atelier est prêt à être ouvert</p><p>Sélectionner une exécution pour afficher ses tâches.<br>Sans tâche, aucun Buddy n’apparaît sur le plateau.</p></div>
+        <div id="tasks" class="station-grid" aria-label="Postes correspondant aux tâches"></div>
+      </div>
+      <nav class="task-pagination" aria-label="Pages des postes"><button id="task-page-prev" type="button" class="secondary-button" disabled>← Précédent</button><p id="task-page-label" role="status" aria-live="polite">Aucun poste affiché</p><button id="task-page-next" type="button" class="secondary-button" disabled>Suivant →</button></nav>
+    </section>
+    <section class="review-section" aria-labelledby="detail-title"><div class="section-heading"><div><p class="eyebrow">CONTRÔLE DU TRAVAIL</p><h2 id="detail-title">Inspecter un poste</h2></div><p>Patchs et logs en lecture seule</p></div><div id="details" class="task-details"><p class="empty-details">Sélectionner un poste pour consulter les preuves de son exécution.</p></div></section>
+    <section class="journal-section" aria-labelledby="events-heading"><div class="section-heading"><div><p class="eyebrow">TRACES D’EXÉCUTION</p><h2 id="events-heading">Journal récent</h2></div></div><pre id="events" aria-label="Événements récents">Aucun événement sélectionné.</pre></section>
+  </div>
+</main>
+<footer class="site-footer"><p>STH Factory · Agents interchangeables, preuves vérifiables.</p><p>Les sorties des agents sont des données non fiables. Les worktrees ne sont pas des sandboxes. Aucun lancement, merge ou déploiement depuis cette vue.</p></footer>
+</body>
+</html>

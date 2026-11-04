@@ -1,0 +1,24 @@
+{
+  "status": "succeeded",
+  "base": "cc5cb490a2c9f82f7db611f597fd4e30e3190c65",
+  "source_unchanged": true,
+  "tasks": {
+    "add": {
+      "status": "succeeded",
+      "worktree": "/workspace/sth-factory-delivery-demo/run/worktrees/add",
+      "patch_sha256": "84a96167e40d3ca7b42a2935e1df9b53d0031a2b40cd2d5387d8907510521ebe"
+    },
+    "multiply": {
+      "status": "succeeded",
+      "worktree": "/workspace/sth-factory-delivery-demo/run/worktrees/multiply",
+      "patch_sha256": "87d5ad19df52c38db2e0762ba2c255e0411ec91fc8b2bf4db3c78082c56ad637"
+    },
+    "integration": {
+      "status": "succeeded",
+      "worktree": "/workspace/sth-factory-delivery-demo/run/worktrees/integration",
+      "patch_sha256": "6a9e81b8fa1ccf83c172bdf51d7706430467e1bcc04bc556b5035410567ff025"
+    }
+  },
+  "sth": "/workspace/sth-bin/sth",
+  "security_sandbox": false
+}

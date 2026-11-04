@@ -1,0 +1,45 @@
+[
+  {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+      "bridge_version": "0.2.44",
+      "methods": [
+        "handshake",
+        "project",
+        "status",
+        "catalogue",
+        "preview",
+        "install",
+        "cloud.preview",
+        "cloud.install",
+        "cloud.publish.preview",
+        "cloud.publish",
+        "update.preview",
+        "update",
+        "remove.preview",
+        "remove",
+        "library.list",
+        "library.get",
+        "library.save",
+        "capture",
+        "promote.preview",
+        "promote"
+      ],
+      "protocol_version": 1
+    }
+  },
+  {
+    "jsonrpc": "2.0",
+    "id": 2,
+    "result": {
+      "project": {
+        "root": "/workspace/sth-factory-delivery-demo/run/worktrees/add",
+        "config_path": "/workspace/sth-factory-delivery-demo/run/worktrees/add/.sth/project.json",
+        "configured": false,
+        "config": null
+      },
+      "resources": []
+    }
+  }
+]

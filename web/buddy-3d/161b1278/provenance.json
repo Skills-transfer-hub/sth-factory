@@ -1,0 +1,1824 @@
+{
+  "source_repository": "https://github.com/Skills-transfer-hub/sth-claude",
+  "source_commit": "161b12789f1d8c74f5305f727917c5cb1fca8a13",
+  "method": "JSON literal parsing and strict base64 decoding; no source execution or image reencoding",
+  "source_files": {
+    "ok": {
+      "path": "mods/sth-usage/ui/frames/ok.ts",
+      "git_blob_sha1": "76786e10fbb5cbf9fdd1a7f8a2b605443b185580",
+      "sha256": "97d9a33cf7a5326d4cb8e3367ec3ea634e8597c672a822c7470c9c8f9a4d6831",
+      "bytes": 869934
+    },
+    "work": {
+      "path": "mods/sth-usage/ui/frames/work.ts",
+      "git_blob_sha1": "c5852b1e962cb00b06a5c8c1f2067ba18f93dec5",
+      "sha256": "8a1ff1e86b1a3df1b507d7b9d0631e52ce5675429a3498a65dc384b9d3e9d964",
+      "bytes": 512374
+    },
+    "done": {
+      "path": "mods/sth-usage/ui/frames/done.ts",
+      "git_blob_sha1": "da8a92906940d05586062c63120758bd4ad33ff6",
+      "sha256": "701825cc07831d06c1e322ec29ada99109d3eac56d547f762d7f5cd8a7e56eff",
+      "bytes": 404276
+    },
+    "error": {
+      "path": "mods/sth-usage/ui/frames/error.ts",
+      "git_blob_sha1": "bbc12535ae1f21838e6effb83ae8d111f8f8f78a",
+      "sha256": "8e924301ea4fe973ee8c264b8b5f697a45eec170f817b095f19f63229913ac69",
+      "bytes": 322312
+    },
+    "SOURCE-LICENSE.txt": {
+      "path": "mods/sth-usage/LICENSE",
+      "git_blob_sha1": "647f75d04db816839daa455829bc1f0e23464951",
+      "sha256": "a68b09b323743a647ef546460e5920858bd04ef1b6e960fb32acfc5e46f1ae57",
+      "bytes": 2401
+    },
+    "source-plugin.json": {
+      "path": "mods/sth-usage/.claude-plugin/plugin.json",
+      "git_blob_sha1": "b3b951760333872d9458c82409ee17cfe79fe55b",
+      "sha256": "44b055e57bd85af9bc2bb582b10ce8a0803e2c4b44c85670e937b2581c053e96",
+      "bytes": 715
+    },
+    "source-player.txt": {
+      "path": "mods/sth-usage/ui/buddy.ts",
+      "git_blob_sha1": "17c2b04b0e28cdf06e247ecf31d846f17c2216ce",
+      "sha256": "da2f8a894665d31c15d00b3b4010509650c7cffb5d159d4bfe283c32c8374191",
+      "bytes": 1130
+    }
+  },
+  "frames": {
+    "ok/0000.webp": {
+      "sha256": "8f1383d881472cc2d7b36bfc616781dc30cf32cd66ac1404f0037668dccb132c",
+      "bytes": 8064,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 0,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0001.webp": {
+      "sha256": "ef4bc10e96f86f8207c97523764779c64da7261199e24e0c579620cd23586e36",
+      "bytes": 8170,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 1,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0002.webp": {
+      "sha256": "1f000db9a3ab6b11eee44aab83ef176d42665e0d97e459c235f2530afe89d6d3",
+      "bytes": 8236,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 2,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0003.webp": {
+      "sha256": "83270395db84322e3bf725d6e9330146ea4518cdfc4d142475d83dfe666b48b0",
+      "bytes": 8262,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 3,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0004.webp": {
+      "sha256": "a15ddd54657d33abcb5e9af8de78ae14e92fa307bdfb5e0c5895e5a4b972e695",
+      "bytes": 8254,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 4,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0005.webp": {
+      "sha256": "bcf2dcd4792f9ca566dda45961dac177a86ba53a4703253bc481ff0dfdf955f3",
+      "bytes": 7958,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 5,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0006.webp": {
+      "sha256": "73cd6466feaee649103002215a4e4518a373fb4801b51a1768f2c4853eac6394",
+      "bytes": 7992,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 6,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0007.webp": {
+      "sha256": "35cd4b169d059d55bc04473003be310afb63a9fd789adaf3c3a430c2d36f67c9",
+      "bytes": 8084,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 7,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0008.webp": {
+      "sha256": "fb2935e9b1babb423df34c0c80986503875e26331539923c29b9962b2b9b00d3",
+      "bytes": 8260,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 8,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0009.webp": {
+      "sha256": "8c5ee76172d9d82396dffc5cd78719e66275e547c90b01b679a15bb95d1bf50f",
+      "bytes": 8278,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 9,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0010.webp": {
+      "sha256": "a884da4ae8a97e72ac904f0ba241d4df61e63c57ca686684fef5fe8dabf78147",
+      "bytes": 8022,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 10,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0011.webp": {
+      "sha256": "8889a3e58f078f219789ced3e1ae40d87d46e9f1dc4b18a05bdf0d0b340b504d",
+      "bytes": 8008,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 11,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0012.webp": {
+      "sha256": "01fb39beaaf545ddcd9509790257c55c8f105fd8b99c02e1aed5a30590e5527b",
+      "bytes": 8006,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 12,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0013.webp": {
+      "sha256": "657204fbb1e260316cbdab06b53412a7a0044fe6473265de0ef5d47f4862b426",
+      "bytes": 8102,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 13,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0014.webp": {
+      "sha256": "d0079d3834db7d9954e1b0677b9cadca065dc0b6219f370ba6415cb530e7c907",
+      "bytes": 8092,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 14,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0015.webp": {
+      "sha256": "a0ef1fddfead29dd4e2ceeadccc46d76ff1b027256409726544a5f7a0226a687",
+      "bytes": 8174,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 15,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0016.webp": {
+      "sha256": "bce8a74c998a2db6eb3b5fa06a5ae7c09f2c65805313daa728fa914275a09a8d",
+      "bytes": 8164,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 16,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0017.webp": {
+      "sha256": "1d2912b9edfb4ca813f60ff5ed5912a940a0dc707c5023e6a83471f1eb518a0b",
+      "bytes": 8150,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 17,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0018.webp": {
+      "sha256": "a3ec1e23da8e0c04c4ad4d55604accf82764ededdefd34579c6e50f419f269b8",
+      "bytes": 8184,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 18,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0019.webp": {
+      "sha256": "a7f9c1ee0306413fdf4dcef7901de516495434d59763a6ac6be088dd67a4e47f",
+      "bytes": 8076,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 19,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0020.webp": {
+      "sha256": "1f22e623f4fd89fa0864190687cf3189592b6c284a116f77a77ca544683f20e3",
+      "bytes": 8080,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 20,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0021.webp": {
+      "sha256": "f89c46790475d370492fdb65b239311dc32bebc1544e26011d1d6b8536f048d2",
+      "bytes": 8124,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 21,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0022.webp": {
+      "sha256": "08cfba32e075ed76b28a8c43376e2071366353e9cc59b71efb16f51066db816c",
+      "bytes": 8186,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 22,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0023.webp": {
+      "sha256": "e6a82b0428f811767bed92dbc1d4412345f610b67767d9560dbf03022687bea0",
+      "bytes": 8262,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 23,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0024.webp": {
+      "sha256": "32a4d36841daf72a6aaf841dde87df44c40dcc8b87bc46ab14fed69afd65a0b4",
+      "bytes": 8290,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 24,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0025.webp": {
+      "sha256": "29548102a3a9a4c377ba7ddbc7711453f139dc1f5ca90101d1a2835dcb50df9d",
+      "bytes": 8178,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 25,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0026.webp": {
+      "sha256": "1be41ec0b601f2803210dfaac59470b4b8b0c0e029449d8dea87f30de8bdcd63",
+      "bytes": 8174,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 26,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0027.webp": {
+      "sha256": "e7bad11c1625a95078db506da958f71a3eb21fa8f171a19477e8a365c0e8d012",
+      "bytes": 8174,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 27,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0028.webp": {
+      "sha256": "00d3e0b32b179bcc44851de67bc1b22dda859cacb0711a880b7db56726517f8d",
+      "bytes": 8202,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 28,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0029.webp": {
+      "sha256": "7a34fb77631a99143ff9e6c886996bf3f71023cfa812f217a287193ad64834bf",
+      "bytes": 8486,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 29,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0030.webp": {
+      "sha256": "37233f7866162cfe3f80ca0e8ef0cb04eeaf7f6e604d535e357bb4faf7b08d97",
+      "bytes": 8200,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 30,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0031.webp": {
+      "sha256": "38f64c12c997eb6b232f8f02e7d328cef6e3ac07e1a0eb267d51c9fbf6102c04",
+      "bytes": 8610,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 31,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0032.webp": {
+      "sha256": "52926905d797b65c7a3d08078b34dc913e4868724d06da806c5f568c0f287550",
+      "bytes": 8386,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 32,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0033.webp": {
+      "sha256": "909955255898980ec27e6af1d7d8f7577f582b65d83ba0cf10e09fa45c5c1275",
+      "bytes": 8642,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 33,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0034.webp": {
+      "sha256": "b952326e106637498b1c6d177456fcf1f931c68509b38512364446fbcaabda82",
+      "bytes": 8556,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 34,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0035.webp": {
+      "sha256": "cfc4f413abc377d4d4ccc81386ae98be97fd14265179c00c05c8cbdbc9b6fa0c",
+      "bytes": 8320,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 35,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0036.webp": {
+      "sha256": "173d79909c6f6715bfa58d3a32bae71eab870fe5a8f9e333c635e34c25a99576",
+      "bytes": 8396,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 36,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0037.webp": {
+      "sha256": "b225043d05375a85fb2df4f71465cd6bdddf78d774d8235f803daddf595f6823",
+      "bytes": 8496,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 37,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0038.webp": {
+      "sha256": "382d10189413e6af62ad93e9ea56bbdb206eb23de55ca903353a67ad090a9457",
+      "bytes": 8176,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 38,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0039.webp": {
+      "sha256": "235568c95fbd47918709190042c8878f9068870b8ad3910e2894ccfe5a6d4657",
+      "bytes": 8170,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 39,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0040.webp": {
+      "sha256": "9e0125bd7835cc82327c7ca82dddf26bd6cc3086ab1b77a5a9d4af4172de487d",
+      "bytes": 8298,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 40,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0041.webp": {
+      "sha256": "bd56d8e5d3547da6bb325a9266caefc40c7800052dd5d08daeb331e0333d566c",
+      "bytes": 8416,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 41,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0042.webp": {
+      "sha256": "81a91648174295319a154e8a278e7319c481bf9018c281ccec51830d1a6a8645",
+      "bytes": 8310,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 42,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0043.webp": {
+      "sha256": "dac794f0359a3b725af4ce0571876f541a9272e4a9c291c3d82500e970efbc95",
+      "bytes": 8306,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 43,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0044.webp": {
+      "sha256": "89678c772d57e35165206286cdf7fd75d49df8cc7694178e0e882b100c96dfd8",
+      "bytes": 8134,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 44,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0045.webp": {
+      "sha256": "83283d2dc65bb09a9396064c8226b1ec767bd8fff4e5a234ff51bc1a28f2d485",
+      "bytes": 8224,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 45,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0046.webp": {
+      "sha256": "6484dbd8c06a3444754c1385cf113c8390778744712def1d46d14a3058ab0c47",
+      "bytes": 8180,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 46,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0047.webp": {
+      "sha256": "4cda9546e3ce217a8598bb78150a0a95fd05e34164baff338c2f448dc8ba790e",
+      "bytes": 8282,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 47,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0048.webp": {
+      "sha256": "e71b8632f3ea0ac4745394430af960aac1ba759fdb6ed8956ade35601e07b67a",
+      "bytes": 8238,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 48,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0049.webp": {
+      "sha256": "43e20834ffa1426cccdce9964d5e6a7d3514bd2ff89256f5ae3cc5747a2eb291",
+      "bytes": 8116,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 49,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0050.webp": {
+      "sha256": "8f4dbb31c67edd741733732a6f6bf36d4d39cd78740c8954a9024404e367798f",
+      "bytes": 8136,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 50,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0051.webp": {
+      "sha256": "fdf3cad3810a66eda4a4d1ed2b70b66ea2c2d239c1b0102b69dee9e92d681682",
+      "bytes": 8076,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 51,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0052.webp": {
+      "sha256": "ade67d8d668d7efab1848342ae57fdb6d979f321a908395a6fa2399e38c2ba7c",
+      "bytes": 7970,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 52,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0053.webp": {
+      "sha256": "9ff43405b93db286dcf88036830c62198a087a24af2d5051f6f536459949dc73",
+      "bytes": 8002,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 53,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0054.webp": {
+      "sha256": "194b910d93abbda3132541327f7d1c391558adebe28f9d5856a4af4ca708dbd2",
+      "bytes": 7982,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 54,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0055.webp": {
+      "sha256": "6e06858f3306fc3b4274d7bf03059c75aa3e6d7d2d91dc055affc89361cad5e9",
+      "bytes": 7976,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 55,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0056.webp": {
+      "sha256": "c5649570de3a7a9b691ef25a0437aa85dab2ff43de943f73d3456ed2829468e6",
+      "bytes": 7986,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 56,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0057.webp": {
+      "sha256": "f95065b3f51bb3024db0619bc39cda365d16fc1e82bdace882c5682ffc721f97",
+      "bytes": 8008,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 57,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0058.webp": {
+      "sha256": "c449b562abd514813c2e0b3398f35c37617366f27aa2ee9893a50afdc2f632a9",
+      "bytes": 7970,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 58,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0059.webp": {
+      "sha256": "553b6a4e405007efccfed61222535ec84ffc98e276e92c90ff0eca4f231afa9d",
+      "bytes": 8142,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 59,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0060.webp": {
+      "sha256": "109c093fe8dbb76b66457804470ff1302b6f1a4298d8eabda07d041fecffac1c",
+      "bytes": 8072,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 60,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0061.webp": {
+      "sha256": "e2dfd7c13f0cc152311b149950ba254787c17f7107d30cbb5dae3a90eda781fc",
+      "bytes": 8048,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 61,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0062.webp": {
+      "sha256": "d0db8f55632260a5b42ab7cbedd02908335dad70e96bde247c18286b6584e3be",
+      "bytes": 7962,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 62,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0063.webp": {
+      "sha256": "3609bb1742b68152e1a06ba273c02d8bdfcd50b962f8c6b291078a94a7f14bf6",
+      "bytes": 8046,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 63,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0064.webp": {
+      "sha256": "8fb4bc873c7f0782bcfca6d1f40d6eb46ba41cb17d489e10fa5d4b15a729e23e",
+      "bytes": 7928,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 64,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0065.webp": {
+      "sha256": "65be49bd9597f71e1ea2c069ac425a5a766dd67be81e0a71d91417c657749be2",
+      "bytes": 7944,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 65,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0066.webp": {
+      "sha256": "6307c821d95c088df5246a9267e554845bd6a68ee9c8fbf4ea1d7e6f618da62e",
+      "bytes": 7946,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 66,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0067.webp": {
+      "sha256": "670b46570f8f1417644fef80a8ed6ee1de870260db37c7bce2301d433e9ac088",
+      "bytes": 7892,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 67,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0068.webp": {
+      "sha256": "713debf11c990eb276c37cb47129ebc8ccdb5656a6d5c78d97cb6cdecc7f7cb7",
+      "bytes": 7886,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 68,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0069.webp": {
+      "sha256": "66371354311f137763cca2cdba2a2af55eca3055ebcb53737a015116eda9e614",
+      "bytes": 7906,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 69,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0070.webp": {
+      "sha256": "bd633223c6dd674e9feb478ea56d58fba6c23ddc998ee63a872ca6369db7ad86",
+      "bytes": 7934,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 70,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0071.webp": {
+      "sha256": "ba4fcbb6213c61422df4e392dd1482147c69f56cb1d02e8f0463f9d58b2d6ab5",
+      "bytes": 8002,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 71,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0072.webp": {
+      "sha256": "477d22ada1ad20857032380be25d5a17b809abab7956eedb1c0cebdbbe84d7db",
+      "bytes": 8062,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 72,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0073.webp": {
+      "sha256": "9a05efe7c63e8b008b046f3d694e6b62b8aae171af6c387fab30f5ed438141b9",
+      "bytes": 8162,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 73,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0074.webp": {
+      "sha256": "546ecd4bdd9acfeba51a69d30d5d91a98ecd3b88e6b28d500b09080c15026d9e",
+      "bytes": 8100,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 74,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0075.webp": {
+      "sha256": "523259a07616aa860412e8ea2b4762ab89c940dea509db8019d846357a807d6c",
+      "bytes": 8176,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 75,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0076.webp": {
+      "sha256": "3463e1baacfa7190f8ebff5ed4bda8fd9f19cbcb6eca27a6450b588a11e53402",
+      "bytes": 8324,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 76,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0077.webp": {
+      "sha256": "6163178fd2e9126327346790b84755e62e5d2c51509c0f37d6b9f6c4f1885513",
+      "bytes": 8162,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 77,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0078.webp": {
+      "sha256": "1ac434bf8259aa6fba970aba979bafe4780e7fb9ff71371b6eee658561590380",
+      "bytes": 8116,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 78,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "ok/0079.webp": {
+      "sha256": "414fc043e7e82b04cb8be418cf5840940ca2b7828eb7eb849ec0e4fd220f7d88",
+      "bytes": 8112,
+      "source_file": "mods/sth-usage/ui/frames/ok.ts",
+      "source_frame_index": 79,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0000.webp": {
+      "sha256": "3f5ce6a97bdd158df6bc74ac625b9d1fa6476d4b62c14cff75bc33b33d8225c2",
+      "bytes": 7892,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 0,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0001.webp": {
+      "sha256": "d8252e94f38ce68a6a34a76c14b6662f5c1c3379d4dbffef0e03beb6fc7385d9",
+      "bytes": 7882,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 1,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0002.webp": {
+      "sha256": "dccb8ddfc45ee0f5594249e032bb45c6012a6301299503d139a146961a59385a",
+      "bytes": 7948,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 2,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0003.webp": {
+      "sha256": "0f16261bf8a9baafa40bc224b9da9f475cb2b2428f5e36929cbcc193955aff5d",
+      "bytes": 7958,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 3,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0004.webp": {
+      "sha256": "f3fd2bf4af8c88f739395d5242e59761a2c591a453aeac19a96a86f2792a996c",
+      "bytes": 7970,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 4,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0005.webp": {
+      "sha256": "64b82ee265f0c730c097f2a36061f70188252736dd0af72f10a2e154fc5b6e81",
+      "bytes": 7900,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 5,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0006.webp": {
+      "sha256": "09802fcbe72c76a61b945b8c6954dca2dc6c9fab7f7a91cf893f21641eadb78d",
+      "bytes": 7816,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 6,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0007.webp": {
+      "sha256": "816f7228a96f4c53dc1a09662a746c1649341c91e3a1c9db45e9f533ff1aaefb",
+      "bytes": 7742,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 7,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0008.webp": {
+      "sha256": "3c6443f7d57bb1502caf2009d789d548324a5359205e26149b01abf4f9297687",
+      "bytes": 7988,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 8,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0009.webp": {
+      "sha256": "a54472dfd9ba032f092e7344bdce5f8f7716e4832463425d6d41246e4340e350",
+      "bytes": 7768,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 9,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0010.webp": {
+      "sha256": "6880fbe8e360d3425395b4a306d7051824d00bae30b6d817926056f0fe50eba2",
+      "bytes": 7854,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 10,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0011.webp": {
+      "sha256": "e0e74210762e31ff4c68273d2eab0af1e87aa2268327365b36ecef53b8864ef0",
+      "bytes": 7566,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 11,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0012.webp": {
+      "sha256": "cca86171da4c5e4d85598aaf0ebeb363a8cb897a8e98e9f26a09281307ba1b68",
+      "bytes": 7562,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 12,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0013.webp": {
+      "sha256": "6a67e08b326b5bce3c778f6e7fa9f72bb808c050eb8d73f4e9748992e1c6edf9",
+      "bytes": 7570,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 13,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0014.webp": {
+      "sha256": "494111228c22c78e19dd5ddd185c3506fa7c2547ad114827b8c18fd8dd5b2024",
+      "bytes": 7732,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 14,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0015.webp": {
+      "sha256": "64de641eff7738c9d927d6f9deb2639555cc31f88e1dac4705f0c9e16000fc03",
+      "bytes": 7812,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 15,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0016.webp": {
+      "sha256": "f14c8fb64c7e8de9646290e4b67e0eeef6cb2ec2eb1ae8fd9e56025fa8727c0b",
+      "bytes": 8180,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 16,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0017.webp": {
+      "sha256": "1eae856907cd78a052c865f77bfd5a76f64d7ada8098600c457c85883155c8de",
+      "bytes": 8198,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 17,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0018.webp": {
+      "sha256": "b51ea99052f17a78a364cf0358e17533b31742b2d8ec8a0e77dd6f17ba1d2f25",
+      "bytes": 8214,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 18,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0019.webp": {
+      "sha256": "7657a276c0610d19f35b382979bfb0837adcd2ed7a8271d60bb128e67fbe7a5e",
+      "bytes": 8420,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 19,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0020.webp": {
+      "sha256": "80273a7d31da5d8115250924f39e994f538bc5782273a7d360744fc08637f62c",
+      "bytes": 8328,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 20,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0021.webp": {
+      "sha256": "9390f2dba3e96c106f22801fba2415605ac2ea84d472c4f0ee051fdfdb3c56d3",
+      "bytes": 8306,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 21,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0022.webp": {
+      "sha256": "e72997eb21a4e22235b4763b00d99a3c1b4963f4ac085b5445d44492e643fee1",
+      "bytes": 8310,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 22,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0023.webp": {
+      "sha256": "b4a21537deb949b75d13d4c354f61da90bc3d9e5a56c722677047c80f0c64e08",
+      "bytes": 8338,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 23,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0024.webp": {
+      "sha256": "a32873198b3f2aa885e1ec0ef867a88cdfffd7685ad217460a03b6f0ed60c863",
+      "bytes": 8330,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 24,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0025.webp": {
+      "sha256": "b4a21537deb949b75d13d4c354f61da90bc3d9e5a56c722677047c80f0c64e08",
+      "bytes": 8338,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 25,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0026.webp": {
+      "sha256": "e72997eb21a4e22235b4763b00d99a3c1b4963f4ac085b5445d44492e643fee1",
+      "bytes": 8310,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 26,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0027.webp": {
+      "sha256": "cb3b664a0f6619cab8c72cef15ee617ff16cdae1fb415f42e3ade3628c92f17c",
+      "bytes": 8242,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 27,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0028.webp": {
+      "sha256": "0b57fc0c0576b1084ffb8b64d85d54e263af02fa75fc22b892f2cd687867ed1b",
+      "bytes": 8204,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 28,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0029.webp": {
+      "sha256": "f995966f23db774bd500ebce7195b98c86c0555911d771b976f51a28bce75b0c",
+      "bytes": 8406,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 29,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0030.webp": {
+      "sha256": "2d2f1ef552295e9f494a9572370ad4a369ebff1d1d3fcaf075cd064f8b47e2d3",
+      "bytes": 8010,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 30,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0031.webp": {
+      "sha256": "9c0560e68b309c44675ccd8ca5515906ff7e7f60df7ac2cb39cab01d29468ef5",
+      "bytes": 8074,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 31,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0032.webp": {
+      "sha256": "e8877dd3868f811b01711c2d72490c86bdc333f54b6cdeec92af113d8cedcbf1",
+      "bytes": 7862,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 32,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0033.webp": {
+      "sha256": "918c721f43f16fd821ccef205c1ced4846d470e87b87d6ff0913c7731fa6f8cb",
+      "bytes": 7908,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 33,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0034.webp": {
+      "sha256": "6817bde79eb82480d5129b7c07f8c289c0ab85a1a07b14ca22b3468bcc786d67",
+      "bytes": 7936,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 34,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0035.webp": {
+      "sha256": "58e722ca81ed035ecb56cf15bd5c9c878721b662d8dcdd7c7d8128741ec23da3",
+      "bytes": 7800,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 35,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0036.webp": {
+      "sha256": "d4316bf50f85ce2356ba2c4e20ba10e1288b2170557051e73d62d046b8893d14",
+      "bytes": 7922,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 36,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0037.webp": {
+      "sha256": "99d6d78150cd36d2c5ee8c3c8e4f21b19973d3e2cfbf0f7b9e6c602c4539ecaa",
+      "bytes": 7820,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 37,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0038.webp": {
+      "sha256": "ea8677e1bf3d0251c42d5e1d4c0cc072b660144dc71ca14776ffd833a4eb5301",
+      "bytes": 7880,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 38,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0039.webp": {
+      "sha256": "19986f93e92e377d5a3da7f1b3630be19049bbd2ef4ce1fbd68519f3de45a9e9",
+      "bytes": 7916,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 39,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0040.webp": {
+      "sha256": "47c89ba250c686f54b359db799a2416af17a8a6ddc7d319e3221be3c1782cbe5",
+      "bytes": 7950,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 40,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0041.webp": {
+      "sha256": "0b8cc653c8e689fedaef117e234826b56ce6b6366927dd592ebacf23d7625657",
+      "bytes": 8056,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 41,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0042.webp": {
+      "sha256": "d163b8ee94a680a16215655ee491517533f5c96d5f14d59e7db3660ffa916e63",
+      "bytes": 8054,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 42,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0043.webp": {
+      "sha256": "fe0a10da560cb9ed3bc973cc60e16d46316ed461549b9706cd4f199f185f4675",
+      "bytes": 8048,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 43,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0044.webp": {
+      "sha256": "1e073c2cb01daa768797976ca2698ccc96c7bce66bf8a2179f2936e8b296ba67",
+      "bytes": 8000,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 44,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0045.webp": {
+      "sha256": "0f16261bf8a9baafa40bc224b9da9f475cb2b2428f5e36929cbcc193955aff5d",
+      "bytes": 7958,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 45,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0046.webp": {
+      "sha256": "dccb8ddfc45ee0f5594249e032bb45c6012a6301299503d139a146961a59385a",
+      "bytes": 7948,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 46,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "work/0047.webp": {
+      "sha256": "d8252e94f38ce68a6a34a76c14b6662f5c1c3379d4dbffef0e03beb6fc7385d9",
+      "bytes": 7882,
+      "source_file": "mods/sth-usage/ui/frames/work.ts",
+      "source_frame_index": 47,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0000.webp": {
+      "sha256": "fd82ed716db45f7db4762779ddd6063b5baf1c63f2d25e49ffec501094ce08aa",
+      "bytes": 7834,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 0,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0001.webp": {
+      "sha256": "b4b6c2fa85d6c75ae7d0feefb945f1da51368b9e5ff330f28d718934cfe37699",
+      "bytes": 7834,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 1,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0002.webp": {
+      "sha256": "fe6b3af40106e49b7f5ffb2519d3a3b9bc5a8fc866c59262677c5475c84a8f85",
+      "bytes": 7928,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 2,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0003.webp": {
+      "sha256": "0dac755a54fea92df456531799370a8098c75039b4da0e6be85ed30974baad72",
+      "bytes": 7870,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 3,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0004.webp": {
+      "sha256": "1f481bcd817cd6b2d21b1949b1556a7b885c284bee62ff7a92a4c1f0130a0342",
+      "bytes": 7872,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 4,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0005.webp": {
+      "sha256": "31c58567d70b8e0d451c99334022c1f992247928cd9285f4f5b4809b3474e43f",
+      "bytes": 7944,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 5,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0006.webp": {
+      "sha256": "86fa8f2cc0ea86f974e9770c9241e9b44fbac7bc58a509da1c202eb18f42e7df",
+      "bytes": 7886,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 6,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0007.webp": {
+      "sha256": "850bd107df1734f3d63f67c95d23a95bf780c92b1a60694a7fcc9bdf5e971b3e",
+      "bytes": 7922,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 7,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0008.webp": {
+      "sha256": "81dbd179609e723f4b2a42e114f3c0649d89537adf8898ac6fe5bd86ac14ddc6",
+      "bytes": 7904,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 8,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0009.webp": {
+      "sha256": "1749786e1a172922de9466d3622cdcbe3954fae3143ba8865693936d80c5dca6",
+      "bytes": 7986,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 9,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0010.webp": {
+      "sha256": "98be33b09692af7b403f14f98756a5fee12d1f2c38f64a0ee8c94ab8a600fce9",
+      "bytes": 7934,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 10,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0011.webp": {
+      "sha256": "ff2bc24df85e6481a5c86b2d2afae6900aee32baee6ef00d2ac101f425728f35",
+      "bytes": 7948,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 11,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0012.webp": {
+      "sha256": "31cae1265b52e87edb36352e7828fb64df4291f73b097c4b5e05f6fd2dcd2107",
+      "bytes": 7850,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 12,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0013.webp": {
+      "sha256": "6e3c2da48df9394a9abf84a0868eaf04853b968e78d5d9d5f8c7a4e0ea20f5df",
+      "bytes": 8030,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 13,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0014.webp": {
+      "sha256": "06c4936b28cbd2db591f6bea0967b674245582b357d14b223843e55d9c62c64d",
+      "bytes": 8118,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 14,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0015.webp": {
+      "sha256": "046e5b94a24586179cc295d1f2cb039ded58ddec8550c7f65f12bb73a279289f",
+      "bytes": 8294,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 15,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0016.webp": {
+      "sha256": "267ff0bb1a05d27201783ad093f50f0f4083f25007e0248a9f0906b9fd319e3e",
+      "bytes": 8240,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 16,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0017.webp": {
+      "sha256": "dff177ffa09d3496f9878611807f21323a60424712dc421e6a188776a9afc549",
+      "bytes": 8078,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 17,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0018.webp": {
+      "sha256": "8a44a230d221e5c842136daf305ff230d12d1393862ad54fea1e88a06e333601",
+      "bytes": 8122,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 18,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0019.webp": {
+      "sha256": "06af80851989ca8fb6639b91946f05b0a774b4a23ab128bdb98a93187dd73b14",
+      "bytes": 7858,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 19,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0020.webp": {
+      "sha256": "beb1242a7b31fc9f143e822f6eaae24aef5268ad64515a949e2493fba76302a3",
+      "bytes": 7738,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 20,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0021.webp": {
+      "sha256": "48fc96eb83c1e45758a1fea889bec538f1f3502848dd12b6383032868c7280d7",
+      "bytes": 7634,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 21,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0022.webp": {
+      "sha256": "b9adf900c62d4c12a0e9af6f16f77b0fe91bea50de731df9573cf72517b92997",
+      "bytes": 7890,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 22,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0023.webp": {
+      "sha256": "6f0e21b4d60db3c674324987110988695bad5c2445070a6359af2a425d802bfe",
+      "bytes": 7684,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 23,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0024.webp": {
+      "sha256": "70ffb3fc3c70756c6738e64b0c149a421d4beaa9e8aae605ff35f5644969c922",
+      "bytes": 8024,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 24,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0025.webp": {
+      "sha256": "65c2118959770cad2caacf748a2d62cfaf3d04b14243c6ed007a0e9673d50619",
+      "bytes": 8242,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 25,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0026.webp": {
+      "sha256": "09668d1b7a3e21b8a1a895411f5912c0b358d06315e081f27dd54a00f64e4ceb",
+      "bytes": 8352,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 26,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0027.webp": {
+      "sha256": "27fd9a8bce148447720a77cec9b5fa482af99aa877965c419068e5254d8d45ba",
+      "bytes": 8350,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 27,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0028.webp": {
+      "sha256": "60e8f73770116f4f30a7f56598c80b10d2a6e2828a24ba1f193fcabde4c6839e",
+      "bytes": 8444,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 28,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0029.webp": {
+      "sha256": "bd79578ca1c8d9997175148b47e930f35013f9e4fd09438b1d750294f8e817aa",
+      "bytes": 8198,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 29,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0030.webp": {
+      "sha256": "c32ca455026d177868486d8ca043704b7cc7aeab068d2fd8034d90bdffa2d46e",
+      "bytes": 8046,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 30,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0031.webp": {
+      "sha256": "8702feb3145b5a49d55a0f8244f22672afd570a927a7dd40cc0a63014b5bca99",
+      "bytes": 7864,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 31,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0032.webp": {
+      "sha256": "45fc43975578f46833d7139bed9fd2e47e6bb00ff6ade4cb047914eb036d6cd6",
+      "bytes": 7854,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 32,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0033.webp": {
+      "sha256": "7b398720e9b74b4e83b4d54595748c0622c373e7ce1b28144cf7e23bab0514bb",
+      "bytes": 7842,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 33,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0034.webp": {
+      "sha256": "92cac329c73fed9bed53a4eb0349850963ff37810d4f03a9f04d42fd603aa426",
+      "bytes": 7814,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 34,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0035.webp": {
+      "sha256": "d1e088f8bf196b141e51c9afef725d6548431c2ad614bc1f1098b8c5bfb6ec93",
+      "bytes": 7874,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 35,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0036.webp": {
+      "sha256": "1c3d7196714009f4cd0f1810d40be5499091db9d1e0cb6378fb42bd2e80eca54",
+      "bytes": 7882,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 36,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "done/0037.webp": {
+      "sha256": "60987512fd57ecb7a1e855f8bb10ab24c45b1cb28f0cb5395ea9c3710f1d3c89",
+      "bytes": 7882,
+      "source_file": "mods/sth-usage/ui/frames/done.ts",
+      "source_frame_index": 37,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0000.webp": {
+      "sha256": "0573ac1d11d1cce93b1c6c64251c1a014a20ba0b12c299818c04539130398cab",
+      "bytes": 8062,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 0,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0001.webp": {
+      "sha256": "b385ca39870c13f571f47b861b582db002be0b6c200f36befaeb4675383e18fe",
+      "bytes": 8178,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 1,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0002.webp": {
+      "sha256": "8aab44854f9fbe0960ddbc5aa210ae4637ad7c0f86fd6840e84754d98facb3e3",
+      "bytes": 8250,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 2,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0003.webp": {
+      "sha256": "5b9cb0b0988987e3cfe69278a6bdf9b5588357357e9010bf96f8c9bdaf30791d",
+      "bytes": 7946,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 3,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0004.webp": {
+      "sha256": "4f30b8f7da180e342aa0e897a673a77e2ee9c18b8bfc63418fa855e53663a563",
+      "bytes": 8000,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 4,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0005.webp": {
+      "sha256": "41b88bbac12c1372bf7a0bde6fa57455d94f507fcb986fd3fc1125d8928b8fed",
+      "bytes": 8012,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 5,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0006.webp": {
+      "sha256": "f1362f818dbe36f61391728061c18a8fd1f296ccccd7d93f6bdcd0d35b52b8dd",
+      "bytes": 7926,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 6,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0007.webp": {
+      "sha256": "93608f6cfb80ee1f857ede2d73b7bff078dcf75159d6e22d5879b977c7cf493d",
+      "bytes": 7952,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 7,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0008.webp": {
+      "sha256": "6d553e2b1c6db867da4c96c5f10ed76084558d433c0f430ec5b45a9f350f4adb",
+      "bytes": 7940,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 8,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0009.webp": {
+      "sha256": "152001ce83fc510891efe50e56188bd0e563e261a93d198910736d1a656be15e",
+      "bytes": 7928,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 9,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0010.webp": {
+      "sha256": "74ae8a7593375e070432c3f7ff80550bcd9ac3539ba60b05cad8d5d1c808a83e",
+      "bytes": 7986,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 10,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0011.webp": {
+      "sha256": "8dc65e5313b934936e51204825a88dccc26af896800055ab9f563a8583e7277c",
+      "bytes": 8072,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 11,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0012.webp": {
+      "sha256": "df497554ad67bdf4f57d8e1606f79204348064ef9f6c0bbba1b91706b639ea37",
+      "bytes": 8140,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 12,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0013.webp": {
+      "sha256": "a6f354e973627df617b25534df29d4993a5fbf1209b92a5a8bc14fe29a7651c6",
+      "bytes": 8070,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 13,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0014.webp": {
+      "sha256": "d0ff2b13e2b1633d721379118dfae61f46e13eab260f6517f1e4a4389b8b2555",
+      "bytes": 8068,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 14,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0015.webp": {
+      "sha256": "ede2a203ea550855ef746dd35f14d65325be42f0a03703aa113098e27fd3cfae",
+      "bytes": 8014,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 15,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0016.webp": {
+      "sha256": "e1c15c97e02e57adb24ea7910f4ce3a909fea7711d07d8119b13e564871198e9",
+      "bytes": 8044,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 16,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0017.webp": {
+      "sha256": "4b1d872fa8cad356e64a25ca53f01027529b6aba465d6fe50ef60bf2d5fe931a",
+      "bytes": 7974,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 17,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0018.webp": {
+      "sha256": "16e61fc0e43c222e032aa9880a669821e8d964ec09369d330a8cc2dee1c3adfe",
+      "bytes": 8242,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 18,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0019.webp": {
+      "sha256": "c12529fc3c5e5ec2800fefc1340350b56ba0dd4eb1e18c3019faecb976462e3b",
+      "bytes": 8042,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 19,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0020.webp": {
+      "sha256": "67a156e152b20e8afeb1fba1ea293875e6b20c7dfb7db6bef7c380cfb29dddaf",
+      "bytes": 8054,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 20,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0021.webp": {
+      "sha256": "d3d7a01a39caeb005dec8d6456d6b7f51ed608d349e7cd22a37a9eb0924c279b",
+      "bytes": 8140,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 21,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0022.webp": {
+      "sha256": "e1d6221f2cbae1081b99257d2d4713aa5666ebff3446e615569d12709a37e734",
+      "bytes": 8080,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 22,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0023.webp": {
+      "sha256": "ba8c848b6797cfa9b79c33a8e1c0f263727f9598b9846a547072bd41cb536e50",
+      "bytes": 8092,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 23,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0024.webp": {
+      "sha256": "a852c17acb608f98486898fb669d44d4c72198ff5fb2a80bfd919cbc43c547d1",
+      "bytes": 8062,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 24,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0025.webp": {
+      "sha256": "8f1f7a88c71ce8a248a550aa15320bf85ec2c175aa9ab63c0b35b40308f101e2",
+      "bytes": 8030,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 25,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0026.webp": {
+      "sha256": "7b841427ca1f707c6475c7c469bd0dbd16ecca86784674429325ddf55d2dbda1",
+      "bytes": 8062,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 26,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0027.webp": {
+      "sha256": "c11076214c8bf20211f848bbc0298261e63dc169288db31d9eecab0819aacef4",
+      "bytes": 8074,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 27,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0028.webp": {
+      "sha256": "0da613e19b414f5e7173da79177ca035223fb1cea7cb0e8c8329191aff4f2cff",
+      "bytes": 8128,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 28,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    },
+    "error/0029.webp": {
+      "sha256": "e6e64be295829108efaa4036ff38c61be2c53a0cd200f037b25659941fa09f65",
+      "bytes": 8048,
+      "source_file": "mods/sth-usage/ui/frames/error.ts",
+      "source_frame_index": 29,
+      "width": 384,
+      "height": 384,
+      "format": "WEBP"
+    }
+  },
+  "model.blend": {
+    "path": "mods/sth-usage/assets/model/buddy-v6.blend",
+    "git_blob_sha1": "e4b5d5427afe8988f96b09c58f5490c36a42a4d8",
+    "sha256": "9107338bd3677f393456724f751d0f2cc26333f43f739349c117fdc07a029518",
+    "bytes": 492506,
+    "container": "zstd-compressed Blender",
+    "decoded_header": "BLENDER17-01",
+    "decoded_bytes": 3733694
+  }
+}

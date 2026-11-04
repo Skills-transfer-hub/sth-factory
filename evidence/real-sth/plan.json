@@ -1,0 +1,28 @@
+{
+  "tasks": [
+    {
+      "id": "add",
+      "runtime": "fake",
+      "files": {
+        "add.py": "def add(left, right):\n    return left + right\n"
+      }
+    },
+    {
+      "id": "multiply",
+      "runtime": "command",
+      "command": "write",
+      "assets": [
+        "d36dda0e-6687-4ddc-9f5d-ac322c1d7060"
+      ]
+    },
+    {
+      "id": "integration",
+      "runtime": "command",
+      "command": "check",
+      "depends_on": [
+        "add",
+        "multiply"
+      ]
+    }
+  ]
+}

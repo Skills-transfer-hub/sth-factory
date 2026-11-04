@@ -1,0 +1,19 @@
+{
+  "commands": {
+    "check": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/workspace/sth-factory/examples/demo_worker.py",
+      "check"
+    ],
+    "write": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/workspace/sth-factory/examples/demo_worker.py",
+      "write"
+    ]
+  },
+  "workers": 2,
+  "max_tasks": 3,
+  "task_timeout": 10,
+  "run_timeout": 30,
+  "max_output_bytes": 1048576
+}

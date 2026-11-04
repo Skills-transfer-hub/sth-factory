@@ -1,0 +1,10 @@
+{
+  "version": "STH Alpha 0.2.44",
+  "archive_source": "https://github.com/Skills-transfer-hub/sth-releases/releases/latest/download/sth-linux-amd64.tar.gz",
+  "archive_sha256": "66c4ab08c0b453b661386f18305565cd6497d2f4cdac18fd05b22338c3af9156",
+  "checksum_matched_published_SHA256SUMS": true,
+  "release_signature_verified": false,
+  "binary_sha256": "36d7e066ba60c28b797119bce9e2898aa9f84c80979d7c3157dec12852db6663",
+  "inspected_source_commit": "695b154094664df194907674dbb0bca01229dbd7",
+  "note": "Release binary and inspected current source are distinct; exact source build was blocked by dependency download policy."
+}

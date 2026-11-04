@@ -1,0 +1,16 @@
+diff --git a/add.py b/add.py
+new file mode 100644
+index 0000000..e04996c
+--- /dev/null
++++ b/add.py
+@@ -0,0 +1,2 @@
++def add(left, right):
++    return left + right
+diff --git a/multiply.py b/multiply.py
+new file mode 100644
+index 0000000..ea392b9
+--- /dev/null
++++ b/multiply.py
+@@ -0,0 +1,2 @@
++def multiply(left, right):
++    return left * right

@@ -1,0 +1,27 @@
+test_assets_require_explicit_sth_binary (test_bridge.BridgeTests.test_assets_require_explicit_sth_binary) ... ok
+test_real_sth_full_chain (test_bridge.BridgeTests.test_real_sth_full_chain) ... ok
+test_rpc_error_and_wrong_version_fail_closed (test_bridge.BridgeTests.test_rpc_error_and_wrong_version_fail_closed) ... ok
+test_cancellation_during_clone_keeps_evidence (test_factory.FactoryTests.test_cancellation_during_clone_keeps_evidence) ... ok
+test_conflicting_patches_fail_integration (test_factory.FactoryTests.test_conflicting_patches_fail_integration) ... ok
+test_dag_integration_and_human_changes_preserved (test_factory.FactoryTests.test_dag_integration_and_human_changes_preserved) ... ok
+test_existing_run_not_overwritten (test_factory.FactoryTests.test_existing_run_not_overwritten) ... ok
+test_failure_blocks_dependents (test_factory.FactoryTests.test_failure_blocks_dependents) ... ok
+test_fake_traversal_and_symlink_rejected (test_factory.FactoryTests.test_fake_traversal_and_symlink_rejected) ... ok
+test_git_respects_task_timeout (test_factory.FactoryTests.test_git_respects_task_timeout) ... ok
+test_process_does_not_inherit_secrets_or_home (test_factory.FactoryTests.test_process_does_not_inherit_secrets_or_home) ... ok
+test_rejects_cycle_unknown_dependency_and_duplicate (test_factory.FactoryTests.test_rejects_cycle_unknown_dependency_and_duplicate) ... ok
+test_shared_run_budget_bounds_sequential_tasks (test_factory.FactoryTests.test_shared_run_budget_bounds_sequential_tasks) ... ok
+test_source_untracked_content_change_is_detected (test_factory.FactoryTests.test_source_untracked_content_change_is_detected) ... ok
+test_staged_change_detected_with_identical_worktree_and_status (test_factory.FactoryTests.test_staged_change_detected_with_identical_worktree_and_status) ... ok
+test_timeout_cancellation_and_output_limit (test_factory.FactoryTests.test_timeout_cancellation_and_output_limit) ... ok
+test_timeout_stops_child_in_same_process_group (test_factory.FactoryTests.test_timeout_stops_child_in_same_process_group) ... ok
+test_transitive_dependencies_applied_once (test_factory.FactoryTests.test_transitive_dependencies_applied_once) ... ok
+test_worktree_is_not_security_sandbox (test_factory.FactoryTests.test_worktree_is_not_security_sandbox) ... ok
+test_worktree_metadata_creation_is_serialized (test_factory.FactoryTests.test_worktree_metadata_creation_is_serialized) ... ok
+test_codex_adapter_contract_without_calling_model (test_runtimes.RuntimeTests.test_codex_adapter_contract_without_calling_model) ... ok
+test_malformed_input_and_budget_rejected (test_runtimes.RuntimeTests.test_malformed_input_and_budget_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 7.366s
+
+OK

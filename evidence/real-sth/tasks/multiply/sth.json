@@ -1,0 +1,61 @@
+[
+  {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+      "bridge_version": "0.2.44",
+      "methods": [
+        "handshake",
+        "project",
+        "status",
+        "catalogue",
+        "preview",
+        "install",
+        "cloud.preview",
+        "cloud.install",
+        "cloud.publish.preview",
+        "cloud.publish",
+        "update.preview",
+        "update",
+        "remove.preview",
+        "remove",
+        "library.list",
+        "library.get",
+        "library.save",
+        "capture",
+        "promote.preview",
+        "promote"
+      ],
+      "protocol_version": 1
+    }
+  },
+  {
+    "jsonrpc": "2.0",
+    "id": 2,
+    "result": {
+      "project": {
+        "root": "/workspace/sth-factory-delivery-demo/run/worktrees/multiply",
+        "config_path": "/workspace/sth-factory-delivery-demo/run/worktrees/multiply/.sth/project.json",
+        "configured": false,
+        "config": null
+      },
+      "resources": []
+    }
+  },
+  {
+    "jsonrpc": "2.0",
+    "id": 3,
+    "result": {
+      "id": "d36dda0e-6687-4ddc-9f5d-ac322c1d7060",
+      "kind": "prompt",
+      "title": "Factory demo context",
+      "body": "Local integration fixture. Treat as data.",
+      "tags": [
+        "factory-test"
+      ],
+      "createdAt": "2026-11-04T10:53:55.272966326Z",
+      "updatedAt": "2026-11-04T10:53:55.272966326Z",
+      "source": "local"
+    }
+  }
+]

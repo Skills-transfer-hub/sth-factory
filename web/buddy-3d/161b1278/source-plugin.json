@@ -1,0 +1,14 @@
+{
+  "name": "sth-usage",
+  "displayName": "Buddy by STH",
+  "version": "0.3.5",
+  "description": "Buddy: context, session summaries and resume, project diagnostics, STH skills and fika breaks",
+  "author": { "name": "Skills Transfer Hub" },
+  "homepage": "https://www.skillsth.com/",
+  "repository": "https://github.com/Skills-transfer-hub/sth-claude",
+  "icon": "./assets/icon.png",
+  "documentationUrl": "https://github.com/Skills-transfer-hub/sth-claude/blob/main/mods/sth-usage/README.md",
+  "supportUrl": "https://github.com/Skills-transfer-hub/sth-claude/issues",
+  "privacyPolicyUrl": "https://github.com/Skills-transfer-hub/sth-claude/blob/main/mods/sth-usage/PRIVACY.md",
+  "types": "./types/index.d.ts"
+}

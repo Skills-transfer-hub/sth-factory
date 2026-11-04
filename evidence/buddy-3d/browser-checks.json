@@ -1,0 +1,16 @@
+{
+  "reduced_motion_no_frame_changes": true,
+  "narrow_viewport_no_horizontal_overflow": true,
+  "stale_success_response_cannot_override_selected_error": true,
+  "stale_review_response_cannot_replace_current_error_logs": true,
+  "actual_runtime_states": [
+    "succeeded",
+    "failed"
+  ],
+  "waiting_work_success_error_verified": true,
+  "pause_preserves_state_updates": true,
+  "initial_reduced_motion_static_pose": true,
+  "source_frames_unmodified": true,
+  "model_called": false,
+  "source_git_unchanged": true
+}
